@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Yessimkhan">
+    <title>Aeona</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1><a href="#">Aeona</a></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Features</a></li>
+                <li><a href="#" id="faq-button">FAQs</a></li>
+                <li><a href="#" id="login-button">Log in</a></li>
+                <li><a href="#" id="nav-signup-button">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section style="text-align: center;">
+            <h1>Книги совместно, везде и всегда.</h1>
+            <p>Aeona это место где вы сможете читать, публиковать и обсуждать обзоры любых книг вместе с друзьями.</p>
+            <button class="signup-button" id="main-signup-button">Sign Up</button>
+        </section>
+        <section class="book-list">
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Поиск...">
+                <button id="search-button">Найти</button>
+            </div>
+            <div class="container">
+                <h2>Наша коллекция книг</h2>
+                <div class="books">
+                    <div class="book" data-title="Martin Eden" data-author="Джек Лондон" data-genre="Художественная литература" data-description="Полуавтобиографический роман о борьбе писателя на пути к успеху и личных потерях, связанных с этим." data-rating="4.5" data-reviews='[{"name": "John Doe", "rating": 5, "review": "Увлекательная история о решимости и суровой реальности преследования своих мечтаний."}, {"name": "Jane Smith", "rating": 4, "review": "Красиво написанный, хотя иногда и мрачный, рассказ, который держит в напряжении до самого конца."}]'>
+                        <img src="martin eden.jpg" alt="Martin Eden">
+                        <h3>Martin Eden</h3>
+                        <p>Bittersweet</p>
+                    </div>
+                    <div class="book" data-title="Man's Search For Meaning" data-author="Виктор Франкл" data-genre="Психология" data-description="Известная работа Виктора Франкла о поиске смысла жизни и психологическом выживании в условиях концлагеря." data-rating="4.8" data-reviews='[{"name": "Alice", "rating": 5, "review": "Мощная книга о человеческой стойкости и находке смысла даже в самых темных временах."}]'>
+                        <img src="man in search.jpg" alt="Man's Search For Meaning">
+                        <h3>Man's Search For Meaning</h3>
+                        <p>Просто прочтите</p>
+                    </div>
+                    <div class="book" data-title="Elon Musk" data-author="Эшли Вэнс" data-genre="Биография" data-description="Биография Илона Маска, основателя SpaceX и Tesla, о его инновациях и стремлении к изменению мира." data-rating="4.7" data-reviews='[{"name": "Bob", "rating": 5, "review": "Вдохновляющая история о человеке, который стремится к большим изменениям."}]'>
+                        <img src="elon musk.jpg" alt="Elon Musk">
+                        <h3>Elon Musk</h3>
+                        <p>Гений</p>
+                    </div>
+                    <div class="book" data-title="Educated" data-author="Тара Вестовер" data-genre="Мемуары" data-description="Автобиография Тары Вестовер о её пути из изолированного дома в Айдахо к получению докторской степени в Кембридже." data-rating="4.6" data-reviews='[{"name": "Charlie", "rating": 5, "review": "Удивительная история о силе образования и человеческом духе."}]'>
+                        <img src="educated.jpg" alt="Educated">
+                        <h3>Educated</h3>
+                        <p>Трогательная</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="faq-section" class="faqs">
+            <div class="container">
+                <h2>(Очень) часто задаваемые вопросы</h2>
+                <div class="faq">
+                    <h3>Как я могу начать пользоваться Aeona?</h3>
+                    <p>Для начала вам нужно зарегистрироваться на нашем сайте. После этого вы сможете начать читать, публиковать и обсуждать обзоры книг.</p>
+                </div>
+                <div class="faq">
+                    <h3>В чем смысл жизни?</h3>
+                    <p>42, ну или вкусная пицца.</p>
+                </div>
+                <div class="faq">
+                    <h3>Когда выйдет продолжение Rick & Morty?</h3>
+                    <p>Скоро (wabalabadubdub).</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Aeona. All rights reserved.</p>
+    </footer>
+
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" id="close-login">&times;</span>
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="login-email">Email:</label>
+                <input type="email" id="login-email" name="email" required>
+                <label for="login-password">Password:</label>
+                <input type="password" id="login-password" name="password" required>
+                <button type="submit" class="modal-button">Log in</button>
+            </form>
+        </div>
+    </div>
+
+
+    <div id="signup-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" id="close-signup">&times;</span>
+            <h2>Sign Up</h2>
+            <form id="signup-form">
+                <label for="signup-username">Username:</label>
+                <input type="text" id="signup-username" name="username" required>
+                <label for="signup-email">Email:</label>
+                <input type="email" id="signup-email" name="email" required>
+                <label for="signup-password">Password:</label>
+                <input type="password" id="signup-password" name="password" required>
+                <button type="submit" class="modal-button">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+ 
+    <div id="book-detail-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" id="close-book-detail">&times;</span>
+            <div class="book-info">
+                <img id="book-detail-image" src="" alt="">
+                <div class="book-meta">
+                    <h2 id="book-detail-title"></h2>
+                    <p><strong>Автор:</strong> <span id="book-detail-author"></span></p>
+                    <p><strong>Жанр:</strong> <span id="book-detail-genre"></span></p>
+                    <p><strong>Описание:</strong> <span id="book-detail-description"></span></p>
+                    <p><strong>Средний рейтинг:</strong> <span id="book-detail-rating"></span>/5</p>
+                </div>
+            </div>
+            <section class="reviews">
+                <div class="container">
+                    <h2>Обзоры</h2>
+                    <div id="book-detail-reviews" class="review-list">
+                        <!-- Reviews will be injected here by JavaScript -->
+                    </div>
+                </div>
+            </section>
+            <section class="add-review">
+                <div class="container">
+                    <h2>Добавить обзор</h2>
+                    <form id="review-form">
+                        <label for="reviewer-name">Имя:</label>
+                        <input type="text" id="reviewer-name" name="name" required>
+                        <label for="reviewer-rating">Рейтинг:</label>
+                        <input type="number" id="reviewer-rating" name="rating" min="1" max="5" required>
+                        <label for="reviewer-review">Обзор:</label>
+                        <textarea id="reviewer-review" name="review" required></textarea>
+                        <button type="submit" class="modal-button">Submit</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
